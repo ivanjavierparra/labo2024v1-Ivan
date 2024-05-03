@@ -1,0 +1,2 @@
+Abrir google cloud sdk shelll
+gsutil -m cp -r gs://buko777/exp c:\Users\Usuario\Downloads

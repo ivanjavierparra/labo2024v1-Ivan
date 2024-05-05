@@ -51,7 +51,7 @@ setwd( envg$EXPENV$wf_dir_local )
 #------------------------------------------------------------------------------
 # cargo la  "libreria" de los experimentos
 
-exp_lib <- paste0( envg$EXPENV$repo_dir,"/src/lib/z590_exp_lib_01.r")
+exp_lib <- paste0( envg$EXPENV$repo_dir,"/exp/00/z590_exp_lib_01.r")
 source( exp_lib )
 
 #------------------------------------------------------------------------------
@@ -370,6 +370,6 @@ corrida_guantesblancos_202109( paste0("gb01-",envg$EXPENV$exp_num) )
 # Luego partiendo de  FE0001
 # genero TS0002, HT0002 y ZZ0002
 
-corrida_guantesblancos_202107( paste0("gb02-",envg$EXPENV$exp_num) )
+# corrida_guantesblancos_202107( paste0("gb02-",envg$EXPENV$exp_num) )
 
  

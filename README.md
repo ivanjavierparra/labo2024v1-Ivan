@@ -17,4 +17,4 @@ Repositorio mi experimento colaborativo:
 https://github.com/ivanjavierparra/lab1-mcd-austral
 
 Planilla de mis experimentos para la competencia kaggle:
-https://docs.google.com/spreadsheets/d/127clnGnosJW7Mkc8igeIVE6zar6ptSmUCzvfepFEst8/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/127clnGnosJW7Mkc8igeIVE6zar6ptSmUCzvfepFEst8/edit?usp=drive_link

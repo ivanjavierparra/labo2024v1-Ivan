@@ -18,4 +18,7 @@ https://github.com/ivanjavierparra/lab1-mcd-austral
 
 Planilla de mis experimentos para la competencia kaggle: <br>
 https://docs.google.com/spreadsheets/d/127clnGnosJW7Mkc8igeIVE6zar6ptSmUCzvfepFEst8/edit?usp=drive_link
-
+<br>
+Nota: los experimentos 14, 15, 16 y 17 los corrí directamente desde el fork del repositorio de la catedra, si bien sus códigos se encuentran en la carpeta exp. <br>
+Link al fork del repositorio de la cátedra: <br>
+https://github.com/ivanjavierparra/labo2024v1.git

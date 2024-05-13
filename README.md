@@ -31,6 +31,11 @@ https://github.com/ivanjavierparra/labo2024v1.git
 - Semilla 1
 <br>
 
+<b> Grupo: Trelew Austral </b>
+Entre los alumnos: Carreño Francisco, Cablinsky Pablo, Griffiths Waldo e Iván Parra estuvimos jugando con los csv que mejor puntuación nos dieron, logrando, a través de un método de votación establecido por el profesor en Kaggle, una puntuación de 64.677. Los archivos se encuentran a la carpeta <b>exp/TrelewAustral</b> de este repositorio. 
+
+<br>
+
 Repositorio de mi experimento colaborativo: <br>
 https://github.com/ivanjavierparra/lab1-mcd-austral
 

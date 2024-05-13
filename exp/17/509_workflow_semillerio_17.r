@@ -16,7 +16,7 @@ envg$EXPENV <- list()
 envg$EXPENV$exp_dir <- "~/buckets/b1/exp/"
 envg$EXPENV$wf_dir <- "~/buckets/b1/flow/"
 envg$EXPENV$wf_dir_local <- "~/flow/"
-envg$EXPENV$repo_dir <- "~/labo2024v1/"
+envg$EXPENV$repo_dir <- "~/labo2024v1-Ivan/"
 envg$EXPENV$datasets_dir <- "~/buckets/b1/datasets/"
 envg$EXPENV$arch_sem <- "mis_semillas.txt"
 
@@ -49,7 +49,7 @@ setwd( envg$EXPENV$wf_dir_local )
 #------------------------------------------------------------------------------
 # cargo la  "libreria" de los experimentos
 
-exp_lib <- paste0( envg$EXPENV$repo_dir,"/src/lib/z590_exp_lib_01.r")
+exp_lib <- paste0( envg$EXPENV$repo_dir,"/exp/17/z590_exp_lib_01.r")
 source( exp_lib )
 
 #------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ DT_incorporar_dataset_baseline <- function( pmyexp, parch, pserver="local")
   if( -1 == (param_local <- exp_init_datos( pmyexp, parch, pserver ))$resultado ) return( 0 )# linea fija
 
 
-  param_local$meta$script <- "/src/workflow-01/z511_DT_incorporar_dataset.r"
+  param_local$meta$script <- "/exp/17/z511_DT_incorporar_dataset.r"
 
   param_local$primarykey <- c("numero_de_cliente", "foto_mes" )
   param_local$entity_id <- c("numero_de_cliente" )
@@ -76,7 +76,7 @@ CA_catastrophe_baseline <- function( pmyexp, pinputexps, pserver="local")
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
 
-  param_local$meta$script <- "/src/workflow-01/z521_CA_reparar_dataset.r"
+  param_local$meta$script <- "/exp/17/z521_CA_reparar_dataset.r"
 
   # Opciones MachineLearning EstadisticaClasica Ninguno
   param_local$metodo <- "MachineLearning" # MachineLearning EstadisticaClasica Ninguno
@@ -91,7 +91,7 @@ DR_drifting_baseline <- function( pmyexp, pinputexps, pserver="local")
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
 
-  param_local$meta$script <- "/src/workflow-01/z531_DR_corregir_drifting_17.r"
+  param_local$meta$script <- "/exp/17/z531_DR_corregir_drifting_17.r"
 
   # No me engraso las manos con Feature Engineering manual
   param_local$variables_intrames <- TRUE
@@ -109,7 +109,7 @@ FE_historia_baseline <- function( pmyexp, pinputexps, pserver="local")
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
 
-  param_local$meta$script <- "/src/workflow-01/z541_FE_historia.r"
+  param_local$meta$script <- "/exp/17/z541_FE_historia.r"
 
   param_local$lag1 <- TRUE
   param_local$lag2 <- TRUE # no me engraso con los lags de orden 2
@@ -157,7 +157,7 @@ TS_strategy_baseline_202109 <- function( pmyexp, pinputexps, pserver="local")
 {
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/src/workflow-01/z551_TS_training_strategy.r"
+  param_local$meta$script <- "/exp/17/z551_TS_training_strategy.r"
 
 
   param_local$future <- c(202109)
@@ -180,7 +180,7 @@ TS_strategy_baseline_202107 <- function( pmyexp, pinputexps, pserver="local")
 {
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/src/workflow-01/z551_TS_training_strategy.r"
+  param_local$meta$script <- "/exp/17/z551_TS_training_strategy.r"
 
 
   param_local$future <- c(202107)
@@ -203,7 +203,7 @@ HT_tuning_baseline <- function( pmyexp, pinputexps, pserver="local")
 {
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/src/workflow-01/z561_HT_lightgbm.r"
+  param_local$meta$script <- "/exp/17/z561_HT_lightgbm.r"
 
   # En caso que se haga cross validation, se usa esta cantidad de folds
   param_local$lgb_crossvalidation_folds <- 5
@@ -260,7 +260,7 @@ ZZ_final_baseline <- function( pmyexp, pinputexps, pserver="local")
 {
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/src/workflow-01/z571_ZZ_final.r"
+  param_local$meta$script <- "/exp/17/z571_ZZ_final.r"
 
   # Que modelos quiero, segun su posicion en el ranking e la Bayesian Optimizacion, ordenado por ganancia descendente
   param_local$modelos_rank <- c(1)
@@ -286,7 +286,7 @@ ZZ_final_semillerio_baseline <- function( pmyexp, pinputexps, pserver="local")
 {
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/src/workflow-01/z881_ZZ_final_semillerio.r"
+  param_local$meta$script <- "/exp/17/z881_ZZ_final_semillerio.r"
 
   # Que modelos quiero, segun su posicion en el ranking e la Bayesian Optimizacion, ordenado por ganancia descendente
   param_local$modelos_rank <- c(1)

@@ -49,7 +49,7 @@ setwd( envg$EXPENV$wf_dir_local )
 #------------------------------------------------------------------------------
 # cargo la  "libreria" de los experimentos
 
-exp_lib <- paste0( envg$EXPENV$repo_dir,"/exp/l4/z590_exp_lib_01.r")
+exp_lib <- paste0( envg$EXPENV$repo_dir,"/exp/19/z590_exp_lib_01.r")
 source( exp_lib )
 
 #------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ DT_incorporar_dataset_baseline <- function( pmyexp, parch, pserver="local")
   if( -1 == (param_local <- exp_init_datos( pmyexp, parch, pserver ))$resultado ) return( 0 )# linea fija
 
 
-  param_local$meta$script <- "/exp/14/z511_DT_incorporar_dataset.r"
+  param_local$meta$script <- "/exp/19/z511_DT_incorporar_dataset.r"
 
   param_local$primarykey <- c("numero_de_cliente", "foto_mes" )
   param_local$entity_id <- c("numero_de_cliente" )
@@ -76,7 +76,7 @@ CA_catastrophe_baseline <- function( pmyexp, pinputexps, pserver="local")
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
 
-  param_local$meta$script <- "/exp/14/z521_CA_reparar_dataset.r"
+  param_local$meta$script <- "/exp/19/z521_CA_reparar_dataset.r"
 
   # Opciones MachineLearning EstadisticaClasica Ninguno
   param_local$metodo <- "MachineLearning" # MachineLearning EstadisticaClasica Ninguno
@@ -91,7 +91,7 @@ DR_drifting_baseline <- function( pmyexp, pinputexps, pserver="local")
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
 
-  param_local$meta$script <- "/exp/14/z531_DR_corregir_drifting.r"
+  param_local$meta$script <- "/exp/19/z531_DR_corregir_drifting_17.r"
 
   # No me engraso las manos con Feature Engineering manual
   param_local$variables_intrames <- TRUE
@@ -109,10 +109,10 @@ FE_historia_baseline <- function( pmyexp, pinputexps, pserver="local")
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
 
-  param_local$meta$script <- "/exp/14/z541_FE_historia.r"
+  param_local$meta$script <- "/exp/19/z541_FE_historia.r"
 
   param_local$lag1 <- TRUE
-  param_local$lag2 <- FALSE # no me engraso con los lags de orden 2
+  param_local$lag2 <- TRUE # no me engraso con los lags de orden 2
   param_local$lag3 <- FALSE # no me engraso con los lags de orden 3
 
   # baseline
@@ -126,7 +126,7 @@ FE_historia_baseline <- function( pmyexp, pinputexps, pserver="local")
   param_local$Tendencias1$ratiomax <- FALSE
 
   # baseline
-  param_local$Tendencias2$run <- FALSE
+  param_local$Tendencias2$run <- TRUE
   param_local$Tendencias2$ventana <- 6
   param_local$Tendencias2$tendencia <- TRUE
   param_local$Tendencias2$minimo <- FALSE
@@ -144,9 +144,9 @@ FE_historia_baseline <- function( pmyexp, pinputexps, pserver="local")
   param_local$RandomForest$mtry <- 40
 
   # varia de 0.0 a 2.0, si es 0.0 NO se activan
-  param_local$CanaritosAsesinos$ratio <- 0.0
+  param_local$CanaritosAsesinos$ratio <- 2.0
   # desvios estandar de la media, para el cutoff
-  param_local$CanaritosAsesinos$desvios <- 4.0
+  param_local$CanaritosAsesinos$desvios <- 0.75
 
   return( exp_correr_script( param_local ) ) # linea fija
 }
@@ -157,19 +157,19 @@ TS_strategy_baseline_202109 <- function( pmyexp, pinputexps, pserver="local")
 {
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/exp/14/z551_TS_training_strategy.r"
+  param_local$meta$script <- "/exp/19/z551_TS_training_strategy.r"
 
 
   param_local$future <- c(202109)
-  param_local$final_train <- c(202107, 202106, 202105, 202104, 202103, 202102, 202101, 202012, 202011)
+  param_local$final_train <- c(202107, 202106, 202105, 202104, 202103, 202102, 202101, 202012, 202011, 202010, 202009, 202008, 202002, 202001)
 
 
-  param_local$train$training <- c(202105, 202104, 202103, 202102, 202101, 202012, 202011, 202010, 202009)
+  param_local$train$training <- c(202105, 202104, 202103, 202102, 202101, 202012, 202011, 202010, 202009, 202008, 202002, 202001, 201912, 201911)
   param_local$train$validation <- c(202106)
   param_local$train$testing <- c(202107)
 
   # undersampling  baseline
-  param_local$train$undersampling <- 0.2
+  param_local$train$undersampling <- 0.5
 
   return( exp_correr_script( param_local ) ) # linea fija
 }
@@ -180,7 +180,7 @@ TS_strategy_baseline_202107 <- function( pmyexp, pinputexps, pserver="local")
 {
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/exp/14/z551_TS_training_strategy.r"
+  param_local$meta$script <- "/exp/19/z551_TS_training_strategy.r"
 
 
   param_local$future <- c(202107)
@@ -192,7 +192,7 @@ TS_strategy_baseline_202107 <- function( pmyexp, pinputexps, pserver="local")
   param_local$train$testing <- c(202105)
 
   # undersampling  baseline
-  param_local$train$undersampling <- 0.2
+  param_local$train$undersampling <- 0.4
 
   return( exp_correr_script( param_local ) ) # linea fija
 }
@@ -203,7 +203,7 @@ HT_tuning_baseline <- function( pmyexp, pinputexps, pserver="local")
 {
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/exp/14/z561_HT_lightgbm.r"
+  param_local$meta$script <- "/exp/19/z561_HT_lightgbm.r"
 
   # En caso que se haga cross validation, se usa esta cantidad de folds
   param_local$lgb_crossvalidation_folds <- 5
@@ -260,7 +260,7 @@ ZZ_final_baseline <- function( pmyexp, pinputexps, pserver="local")
 {
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/exp/14/z571_ZZ_final.r"
+  param_local$meta$script <- "/exp/19/z571_ZZ_final.r"
 
   # Que modelos quiero, segun su posicion en el ranking e la Bayesian Optimizacion, ordenado por ganancia descendente
   param_local$modelos_rank <- c(1)
@@ -286,13 +286,13 @@ ZZ_final_semillerio_baseline <- function( pmyexp, pinputexps, pserver="local")
 {
   if( -1 == (param_local <- exp_init( pmyexp, pinputexps, pserver ))$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/exp/14/z881_ZZ_final_semillerio.r"
+  param_local$meta$script <- "/exp/19/z881_ZZ_final_semillerio.r"
 
   # Que modelos quiero, segun su posicion en el ranking e la Bayesian Optimizacion, ordenado por ganancia descendente
   param_local$modelos_rank <- c(1)
 
-  param_local$kaggle$envios_desde <-  9500L
-  param_local$kaggle$envios_hasta <- 11500L
+  param_local$kaggle$envios_desde <- 10000L
+  param_local$kaggle$envios_hasta <- 14500L
   param_local$kaggle$envios_salto <-   500L
 
   # para el caso que deba graficar
@@ -302,7 +302,7 @@ ZZ_final_semillerio_baseline <- function( pmyexp, pinputexps, pserver="local")
 
   # El parametro fundamental de semillerio
   # Es la cantidad de LightGBM's que ensamblo
-  param_local$semillerio <- 20
+  param_local$semillerio <- 70
 
   return( exp_correr_script( param_local ) ) # linea fija
 }
@@ -375,6 +375,6 @@ corrida_baseline_semillerio_202109( "basem01" )
 # Luego partiendo de  FE0001
 # genero TS0002, HT0002 y ZZ0002
 
-corrida_baseline_semillerio_202107( "basem02" )
+# corrida_baseline_semillerio_202107( "basem02" )
 
  

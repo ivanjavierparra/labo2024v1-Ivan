@@ -28,6 +28,10 @@ https://github.com/ivanjavierparra/labo2024v1.git
 #### Ganancias
 #####  El documento "Ganancias.pdf" explica cómo se obtuvieron las ganancias máximas y cómo replicarlas. A continuación tiene un resumen.
 
+##### El documento "Descripcion de mis experimentos para la Competencia.xlsx" explica en detalle lo que se hizo en cada uno de los experimentos que están en la carpeta ./exp/
+
+<br>
+
 <b>Iván - Usando el workflow</b>
 <b>Ganancia más alta en el leaderbord público: 62.547 </b>
 - Experimento 17

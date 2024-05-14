@@ -48,13 +48,17 @@ Alumnos: Cablinsky Pablo, Iván Parra <br>
 <b>Ganancia máxima</b> 64.677. 
 Los archivos se encuentran a la carpeta <b>exp/TrelewAustral</b> de este repositorio. 
 
-Archivo de Iván: exp_ZZ0001-sem_ZZ0001-sem_01_043_11500pr_020.csv 
+Archivo 1 (Iván): exp_ZZ0001-sem_ZZ0001-sem_01_043_11500pr_020.csv 
 Generador por
-- Experimento 17: carpeta /exp/17/
+- Experimento 17: 
 - Estimulo 11500
 - Semilla 1
+correr el archivo 509_workflow_semillerio_17.r carpeta /exp/17/
 
 
+
+Archivo 2 (Pablo): ZZ1012_01_009_09500pr_020.csv
+Archivo 3 (Pablo): ZZ1012_01_009_10000pr_009.csv
 
 
 <br>

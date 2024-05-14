@@ -26,6 +26,7 @@ https://github.com/ivanjavierparra/labo2024v1.git
 <br>
 
 #### Ganancias
+#####  El documento "Ganancias.pdf" explica cómo se obtuvieron las ganancias máximas y cómo replicarlas. A continuación tiene un resumen.
 
 <b>Iván - Usando el workflow</b>
 <b>Ganancia más alta en el leaderbord público: 62.547 </b>

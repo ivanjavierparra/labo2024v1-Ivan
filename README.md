@@ -44,7 +44,18 @@ Los archivos estan en este repositorio: exp/ivan
 
 <b> Grupo: Trelew Austral - Ensemble de archivos</b>
 <b> Ganancia más alta en el leaderbord público: 64.677 </b>
-Entre los alumnos: Carreño Francisco, Cablinsky Pablo, Griffiths Waldo e Iván Parra estuvimos jugando con los csv que mejor puntuación nos dieron, logrando, a través de un método de votación establecido por el profesor en Kaggle, una puntuación de 64.677. Los archivos se encuentran a la carpeta <b>exp/TrelewAustral</b> de este repositorio. 
+Alumnos: Cablinsky Pablo, Iván Parra <br>
+<b>Ganancia máxima</b> 64.677. 
+Los archivos se encuentran a la carpeta <b>exp/TrelewAustral</b> de este repositorio. 
+
+Archivo de Iván: exp_ZZ0001-sem_ZZ0001-sem_01_043_11500pr_020.csv 
+Generador por
+- Experimento 17: carpeta /exp/17/
+- Estimulo 11500
+- Semilla 1
+
+
+
 
 <br>
 

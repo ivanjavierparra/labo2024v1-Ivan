@@ -25,13 +25,25 @@ https://docs.google.com/spreadsheets/d/127clnGnosJW7Mkc8igeIVE6zar6ptSmUCzvfepFE
 https://github.com/ivanjavierparra/labo2024v1.git
 <br>
 
+#### Ganancias
+
+<b>Iván - Usando el workflow</b>
 <b>Ganancia más alta en el leaderbord público: 62.547 </b>
 - Experimento 17
 - Estimulo 11500
 - Semilla 1
 <br>
 
-<b> Grupo: Trelew Austral </b>
+
+<b>Iván - Usando ensemble de mis 3 mejores archivos</b>
+<b>Ganancia más alta en el leaderbord público: 62.637 </b>
+Los archivos estan en este repositorio: exp/ivan
+
+<br>
+
+
+<b> Grupo: Trelew Austral - Ensemble de archivos</b>
+<b> Ganancia más alta en el leaderbord público: 64.677 </b>
 Entre los alumnos: Carreño Francisco, Cablinsky Pablo, Griffiths Waldo e Iván Parra estuvimos jugando con los csv que mejor puntuación nos dieron, logrando, a través de un método de votación establecido por el profesor en Kaggle, una puntuación de 64.677. Los archivos se encuentran a la carpeta <b>exp/TrelewAustral</b> de este repositorio. 
 
 <br>
